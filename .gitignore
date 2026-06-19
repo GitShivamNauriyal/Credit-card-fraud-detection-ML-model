@@ -59,8 +59,9 @@ data/creditcard.csv
 uploads/
 backend/uploads/
 
-# ===== Model artifacts (large binaries — regenerate from notebook) =====
-*.pkl
+# ===== Model artifacts (large binaries) =====
+# Tracked in git per user preference
+# *.pkl
 
 # ===== Node / Frontend =====
 node_modules/
