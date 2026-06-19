@@ -70,7 +70,7 @@ python app.py
 
 The API starts at `http://localhost:5000`. Set `FLASK_DEBUG=1` for debug mode.
 
-> **Note:** `model.pkl` and `scaler.pkl` are not tracked by git. Generate them by running all cells in `Model.ipynb` (requires `creditcard.csv` from Kaggle in the project root), or obtain them from a team member.
+> **Note:** The pre-trained model artifacts `model.pkl` and `scaler.pkl` are tracked in Git under the `backend/` directory for immediate out-of-the-box run. If you wish to retrain or update the model, you can run all cells in `Model.ipynb` (requires downloading `creditcard.csv` from Kaggle and placing it in the project root).
 
 ### 2. Frontend Setup
 
