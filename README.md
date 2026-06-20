@@ -6,10 +6,10 @@ A full-stack machine learning application for detecting fraudulent credit card t
 
 | Model               | Accuracy | Precision | Recall  | F1-Score | AUC     |
 | ------------------- | -------- | --------- | ------- | -------- | ------- |
-| Logistic Regression  | 99.95%   | 88.46%    | 61.22%  | 72.48%   | 98.67%  |
-| Random Forest        | 99.96%   | 90.32%    | 75.51%  | 82.26%   | 99.23%  |
-| XGBoost              | 99.96%   | 91.67%    | 73.47%  | 81.58%   | 99.18%  |
-| **Hybrid (RF+XGB)**  | **99.97%** | **92.86%** | **78.57%** | **85.11%** | **99.34%** |
+| Logistic Regression  | 98.99%   | 13.42%    | 89.80%  | 23.34%   | 97.65%  |
+| Random Forest        | 99.94%   | 83.51%    | 82.65%  | 83.08%   | 96.44%  |
+| XGBoost              | 99.93%   | 75.89%    | 86.74%  | 80.95%   | 98.34%  |
+| **Hybrid (RF+XGB)**  | **99.94%** | **82.35%** | **85.71%** | **84.00%** | **97.98%** |
 
 The deployed model is the **Hybrid (RF + XGB)** voting classifier, which achieved 100% accuracy on the included test set (`data/bigger_test.csv`, 177 transactions).
 
