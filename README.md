@@ -13,45 +13,6 @@ A full-stack machine learning application for detecting fraudulent credit card t
 
 The deployed model is the **Hybrid (RF + XGB)** voting classifier, which achieved 100% accuracy on the included test set (`data/bigger_test.csv`, 177 transactions).
 
-## Project Structure
-
-```
-Credit_Card_Fraud_Detection_Model/
-├── backend/                  # Flask REST API
-│   ├── app.py                # API server (endpoints under /api)
-│   ├── requirements.txt      # Python dependencies
-│   ├── model.pkl             # Trained hybrid model (generate from notebook)
-│   ├── scaler.pkl            # StandardScaler (generate from notebook)
-│   └── uploads/              # Temp directory for CSV uploads
-│
-├── frontend/                 # React + Vite + TailwindCSS v4
-│   ├── src/
-│   │   ├── App.jsx           # Main application shell
-│   │   ├── index.css         # Global styles + TailwindCSS
-│   │   ├── main.jsx          # React entry point
-│   │   ├── api/
-│   │   │   └── predict.js    # API client
-│   │   └── components/
-│   │       ├── Header.jsx
-│   │       ├── ManualEntry.jsx
-│   │       ├── CsvUpload.jsx
-│   │       └── ResultsDisplay.jsx
-│   ├── index.html
-│   ├── package.json
-│   └── vite.config.js        # Dev proxy to Flask backend
-│
-├── tests/
-│   └── test_model.py         # Model validation test suite
-│
-├── data/
-│   ├── bigger_test.csv       # 177-row test set with Class labels (31 cols)
-│   └── test.csv              # 5-row test set without Class labels (30 cols)
-│
-├── Model.ipynb               # Training notebook (Jupyter)
-├── .gitignore
-└── README.md
-```
-
 ## Quick Start
 
 ### Prerequisites
@@ -70,7 +31,7 @@ python app.py
 
 The API starts at `http://localhost:5000`. Set `FLASK_DEBUG=1` for debug mode.
 
-> **Note:** The pre-trained model artifacts `model.pkl` and `scaler.pkl` are tracked in Git under the `backend/` directory for immediate out-of-the-box run. If you wish to retrain or update the model, you can run all cells in `Model.ipynb` (requires downloading `creditcard.csv` from Kaggle and placing it in the project root).
+> **Note:** The pre-trained model artifacts `model.pkl` and `scaler.pkl` are tracked in Git under the `backend/` directory for immediate out-of-the-box run. If you wish to retrain or update the model, you can place `creditcard.csv` in the `data/` directory and run `python train.py` in the project root.
 
 ### 2. Frontend Setup
 

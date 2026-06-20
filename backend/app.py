@@ -34,7 +34,7 @@ try:
     scaler = _load_artifact("scaler.pkl")
     print("Model and scaler loaded successfully.")
 except FileNotFoundError as exc:
-    print(f"Model files not found ({exc}). Run the training notebook first.")
+    print(f"Model files not found ({exc}). Run train.py or the training notebook first.")
     model = None
     scaler = None
 
